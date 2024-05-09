@@ -11,6 +11,7 @@ class TicTacToeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Tic Tac Toe',
       home: TicTacToeScreen(),
     );
