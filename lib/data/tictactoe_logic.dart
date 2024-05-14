@@ -1,3 +1,5 @@
+import 'dart:math';
+
 class TicTacToeLogic {
   late List<List<String>> board;
   bool isPlayer1Turn = true;
@@ -10,13 +12,13 @@ class TicTacToeLogic {
 
   void resetBoard() {
     board = List.generate(3, (_) => List.filled(3, ''));
-    isPlayer1Turn = true;
+    isPlayer1Turn = Random().nextBool();
   }
 
   void updateBoard(int row, int col) {
-    board[row][col] = currentPlayer;
-    isPlayer1Turn = !isPlayer1Turn;
-  }
+  board[row][col] = currentPlayer; // Setze Spielerkennung (X oder O) anstelle von 1 oder 2
+  isPlayer1Turn = !isPlayer1Turn;
+}
 
   bool checkWinner(int row, int col) {
     String player = board[row][col];
