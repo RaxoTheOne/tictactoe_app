@@ -16,9 +16,10 @@ class TicTacToeLogic {
   }
 
   void updateBoard(int row, int col) {
-  board[row][col] = currentPlayer; // Setze Spielerkennung (X oder O) anstelle von 1 oder 2
-  isPlayer1Turn = !isPlayer1Turn;
-}
+    board[row][col] =
+        currentPlayer; // Setze Spielerkennung (X oder O) anstelle von 1 oder 2
+    isPlayer1Turn = !isPlayer1Turn;
+  }
 
   bool checkWinner(int row, int col) {
     String player = board[row][col];
